@@ -34,9 +34,7 @@ public class Main {
         terrainGenerator.normaliseForGrayscale(map);
         Painter painter = new Painter();
         BufferedImage image = painter.paintMap(map, biome);
-
-        File output = new File(new Date().getTime() + ".jpg");
-        ImageIO.write(image, "jpg", output);
-
+        File output = new File(new Date().getTime() + ".png");
+        ImageIO.write(image, "png", output);
     }
 }
